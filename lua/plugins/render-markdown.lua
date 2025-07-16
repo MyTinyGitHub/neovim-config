@@ -1,10 +1,9 @@
 return {
   "MeanderingProgrammer/render-markdown.nvim",
-  dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
-  -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-  -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-  ---@module 'render-markdown'
-  ---@type render.md.UserConfig
+  dependencies = {
+    "nvim-treesitter/nvim-treesitter",
+    "echasnovski/mini.nvim",
+  }, -- if you use the mini.nvim suite
   opts = {
     code = {
       border = "thin",
@@ -12,10 +11,14 @@ return {
     quote = {
       repeat_linebreak = true,
     },
-    bullet = {
-      left_pad = 0,
-      right_pad = 1,
+    checkbox = {
       render_modes = true,
+      unchecked = {
+        highlight = "Float",
+      },
+      checked = {
+        scope_highlight = "@markup.strikethrough",
+      },
     },
   },
 }

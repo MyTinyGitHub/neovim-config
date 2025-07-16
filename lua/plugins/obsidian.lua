@@ -1,10 +1,11 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*",
   lazy = true,
   ft = "markdown",
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "hrsh7th/nvim-cmp",
   },
   opts = {
     workspaces = {
@@ -14,7 +15,7 @@ return {
       },
     },
     ui = {
-      enabled = false,
+      enable = false,
     },
   },
 }
